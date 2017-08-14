@@ -383,7 +383,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><p><blockquote class="blockquote-center">树莓派挂载硬盘或优盘教程</blockquote></p>
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p><blockquote class="blockquote-center">树莓派挂载硬盘或优盘教程</blockquote></p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>本文参考自树莓派实验室<br>外接U盘或移动硬盘时，默认不会自动挂载，所以需要用 mount 命令挂载。通常我们在 /mnt 或 /media 目录下新建一个目录作为挂载点。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /mnt/1GB_USB_flash</div><div class="line">sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/1GB_USB_flash</div><div class="line">//用完之后卸载</div><div class="line">sudo umount /mnt/1GB_USB_flash</div></pre></td></tr></table></figure></p>
 <p>sda1 是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。</p>
 <h3 id="挂载exFAT格式的硬盘"><a href="#挂载exFAT格式的硬盘" class="headerlink" title="挂载exFAT格式的硬盘"></a>挂载exFAT格式的硬盘</h3><p>FAT 格式U盘 mount 本身就能支持，但如果你的U盘或移动硬盘使用的是 exFAT 格式，mount 会说不支持。没关系，安装 exfat-fuse 软件之后 mount 就支持了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install exfat-fuse</div></pre></td></tr></table></figure></p>
@@ -465,6 +465,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/teconolgy/useofvi.html" rel="prev" title="VI文本编辑器的用法">
+                VI文本编辑器的用法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -551,7 +555,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -562,7 +566,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -573,7 +577,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -672,7 +676,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">博客共2.1k字</span>
+  <span class="post-count">博客共4.6k字</span>
 </div>
 
         

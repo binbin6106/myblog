@@ -280,6 +280,340 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ss.qlu-jxwx.top/2017/tools/baiduyun-pojie.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="binbin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/IMG_20170726_132108.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="啥？这里啥也没有">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/tools/baiduyun-pojie.html" itemprop="url">baiduyun_pojie</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-14T23:41:49+08:00">
+                2017-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">tools</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/tools/baiduyun-pojie.html" class="leancloud_visitors" data-flag-title="baiduyun_pojie">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><blockquote class="blockquote-center">百度云不限速下载工具</blockquote>
+
+<p>本文章仅介绍Windows 使用 BaiduPCS 来不限速下载百度云网盘的文件，其他功能不做介绍。</p>
+<h3 id="下载软件"><a href="#下载软件" class="headerlink" title="下载软件"></a>下载软件</h3><p>BaiduPCS 是一个开源的百度云网盘命令行管理工具，利用百度云的API接口来完成各种操作。</p>
+<p>Github 项目地址：<a href="https://github.com/GangZhuo/BaiduPCS" target="_blank" rel="external">https://github.com/GangZhuo/BaiduPCS</a></p>
+<p>Github 下载地址：<a href="https://github.com/GangZhuo/BaiduPCS/releases" target="_blank" rel="external">https://github.com/GangZhuo/BaiduPCS/releases</a></p>
+<p>打开下载地址后，我们只需下载 pcs-win32-0.X.X.zip 文件。</p>
+<p>下载并解压后，会得到一个 pcs.exe 文件（还有一个说明文件 README.md）。</p>
+<p>如果要运行这个文件，需要通过命令行也就是 CMD 去调用，所以我们需要设置一下环境变量。</p>
+<h3 id="初始操作"><a href="#初始操作" class="headerlink" title="初始操作"></a>初始操作</h3><h4 id="设置下载线程"><a href="#设置下载线程" class="headerlink" title="设置下载线程"></a>设置下载线程</h4><p>默认下载线程为 16，我测试 下载速度很慢，修改为最大值 100 后，速度就不错了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pcs set --max_thread=100</div><div class="line"># 无环境变量命令：D:\pcs.exe set --max_thread=100</div><div class="line"># 设置成功后会提示：Success. You can view context by &apos;pcs context&apos;</div></pre></td></tr></table></figure></p>
+<h4 id="设置验证码路径"><a href="#设置验证码路径" class="headerlink" title="设置验证码路径"></a>设置验证码路径</h4><p>在登陆百度账号的时候，可能会提示验证码图片，而命令行模式也显示不了图片，所以会把图片保存到一个位置，然后手动查看图片。</p>
+<p>假设我要保存验证码图片的路径是：D:\captcha.gif<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pcs set --captcha_file=D:\captcha.gif</div><div class="line"># 无环境变量命令：D:\pcs.exe set --captcha_file=D:\captcha.gif</div><div class="line"># 设置成功后会提示：Success. You can view context by &apos;pcs context&apos;</div></pre></td></tr></table></figure></p>
+<h4 id="设置Cookie路径"><a href="#设置Cookie路径" class="headerlink" title="设置Cookie路径"></a>设置Cookie路径</h4><p>登陆百度账号后，会记录一个Cookie文件，记录登陆状态，默认 PCS的Cookie的路径有问题，我们也需要修改一下。</p>
+<p>假设Cookie的路径是：D:\default.cookie<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pcs set --cookie_file=D:\default.cookie</div><div class="line"># 无环境变量：D:\pcs.exe set --cookie_file=D:\default.cookie</div><div class="line"># 设置成功后会提示：Success. You can view context by &apos;pcs context&apos;</div></pre></td></tr></table></figure></p>
+<h4 id="登录百度账号"><a href="#登录百度账号" class="headerlink" title="登录百度账号"></a>登录百度账号</h4><p>执行命令来登陆百度云账号。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pcs login</div><div class="line"># 无环境变量命令：D:\pcs.exe login</div></pre></td></tr></table></figure></p>
+<p>运行后会提示如下（密码输入是不显示的，盲输）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">User Name: XXXXX</div><div class="line">Password:</div><div class="line"> </div><div class="line"># 下面这段是可能会出现的（图片 验证码）</div><div class="line">The captcha image at D:/captcha.gif. # 验证码图片，找到这个文件并打开查看，然后填写验证码内容（字母/数字）到下面</div><div class="line">Please input the captcha code: XXXX # 验证码内容</div><div class="line"> </div><div class="line"># 下面这段是可能会出现的（邮箱/手机短信 验证码）</div><div class="line">Verify API:</div><div class="line">1) mobile XXX******XX</div><div class="line">2) email XX...X@qq.com</div><div class="line">Please input verify method number (default 1): 1 # 让你选择验证方式，默认1 手机短信验证码</div><div class="line">Please input sms password: 23333 # 邮箱/手机短信 验证码内容</div><div class="line"> </div><div class="line"># 上面这两段是可能会出现的，只有最后出现你的百度用户名（UID），才算登陆成功。</div><div class="line"> </div><div class="line">Login Success. UID: XXXXXX # 你的百度用户名</div></pre></td></tr></table></figure></p>
+<p>本文章仅介绍使用这个工具来不限速下载百度云网盘中的文件，所以只介绍下载文件所必要的功能，其他有兴趣的请去 Github 查看教程！</p>
+<h3 id="下载操作"><a href="#下载操作" class="headerlink" title="下载操作"></a>下载操作</h3><h4 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h4><p>默认 pcs 是在 / 根目录，而如果我们想要进入 /apps (我的应用数据 文件夹) 目录，那么：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pcs cd /apps</div><div class="line"># 无环境变量命令：D:\pcs.exe cd /apps</div></pre></td></tr></table></figure></p>
+<p>假设我们要进入 /视频/电影 目录，那么<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pcs cd /视频/电影</div><div class="line"># 无环境变量命令：D:\pcs.exe cd /视频/电影</div></pre></td></tr></table></figure></p>
+<h4 id="列出当前目录内文件-文件夹列表"><a href="#列出当前目录内文件-文件夹列表" class="headerlink" title="列出当前目录内文件/文件夹列表"></a>列出当前目录内文件/文件夹列表</h4><p>进入 /视频/电影 目录后，我们可以用下面这个命令来查看当前目录内的所有文件/文件夹。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pcs ls</div><div class="line"># 无环境变量命令：D:\pcs.exe ls</div></pre></td></tr></table></figure></p>
+<h4 id="注意：下载的文件名建议加上双引号，避免因为文件名包含空格而导致出错！"><a href="#注意：下载的文件名建议加上双引号，避免因为文件名包含空格而导致出错！" class="headerlink" title="注意：下载的文件名建议加上双引号，避免因为文件名包含空格而导致出错！"></a>注意：下载的文件名建议加上双引号，避免因为文件名包含空格而导致出错！</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pcs d &quot;宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4&quot; &quot;F:\Video\宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4&quot;</div><div class="line"># 无环境变量命令：D:\pcs.exe d &quot;宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4&quot; &quot;F:\Video\宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4&quot;</div></pre></td></tr></table></figure>
+<p>这个命令是下载 PCS 当前目录下的 宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4 文件到本地电脑 F:\Video 目录下。</p>
+<p>当然，如果你不想 cd / ls 去查看，那么可以现在 百度云网页版里看好要下载的文件绝对路径，以上面示例文件为例，那么绝对路径：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pcs d &quot;/视频/电影/宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4&quot; &quot;F:\Video\宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4&quot;</div><div class="line"># 无环境变量命令：D:\pcs.exe d &quot;/视频/电影/宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4&quot; &quot;F:\Video\宝贝老板.The.Boss.Baby.2017.BD1080P.超清中英字幕-MiniMP4.mp4&quot;</div></pre></td></tr></table></figure></p>
+<p>速度还是不错的，惟一一个缺点是，速度不稳定，经过多次测试，在下载线程100时，速度处于 100KB/s ~ 8MB/s 直接，有时候会突然变慢几秒，然后又变快，总共速度不稳定，但是能不限速下载就够了~</p>
+<h3 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h3><p>如果运行下载文件代码后，一直出现 Saving slices… 提示，那么是PCS在寻找可用并质量好的下载点，当然如果卡住十几分钟，那么可能就GG了，尝试更换其他文件试试吧。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ss.qlu-jxwx.top/2017/teconolgy/useofvi.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="binbin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/IMG_20170726_132108.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="啥？这里啥也没有">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/teconolgy/useofvi.html" itemprop="url">VI文本编辑器的用法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T23:05:42+08:00">
+                2017-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/teconolgy/" itemprop="url" rel="index">
+                    <span itemprop="name">teconolgy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/teconolgy/useofvi.html" class="leancloud_visitors" data-flag-title="VI文本编辑器的用法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><blockquote class="blockquote-center">VI的简单用法介绍</blockquote><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/teconolgy/useofvi.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ss.qlu-jxwx.top/2017/实用教程/raspberry-mount.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1191,7 +1525,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1202,7 +1536,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1213,7 +1547,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1296,7 +1630,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">博客共2.1k字</span>
+  <span class="post-count">博客共4.6k字</span>
 </div>
 
         
